@@ -13,6 +13,10 @@
     "css animations",
     "animations in react"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yogi-dad/universal-css-animations"
+  },
   "exports": {
     ".": "index.js",
     "./react": "./lib/react",

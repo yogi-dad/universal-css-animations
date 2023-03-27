@@ -7,7 +7,7 @@ A lightweight and easy-to-use CSS animations library for web applications.
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [Vanilla JavaScript](#vanilla-javascript)
+4. [Vanilla JavaScript](#vanilla-javascript) (WIP)
 5. [React](#react)
 7. [Vue.js](#vuejs)
 8. [Available Animations](#available-animations)

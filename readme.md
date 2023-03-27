@@ -26,7 +26,7 @@ with vanilla JavaScript projects.
 To install the library, use the npm package manager:
 
 ```
-npm install css-animations
+npm install universal-css-animations
 ```
 
 Alternatively, you can include the animations.css file in your project and link it in your HTML file:
@@ -42,14 +42,19 @@ Alternatively, you can include the animations.css file in your project and link 
 Import the css-animate function:
 
 ```
-import { cssAnimate } from 'css-animations-lib';
+import { cssAnimate } from 'universal-css-animations/vanilla';
 ```
 
 Apply an animation to an element:
 
 ```
 const element = document.querySelector('.your-element');
-cssAnimate(element, 'fadeIn', 1000);
+cssAnimate({
+    element:element, 
+    animationName:'fadeIn', 
+    duration:1, //in seconds
+    callbackFunction:callbackFunction
+});
 ```
 
 ### React
@@ -57,14 +62,14 @@ cssAnimate(element, 'fadeIn', 1000);
 Import the css-animate function:
 
 ```
-import { cssAnimate } from 'css-animations-lib';
+import { cssAnimate } from 'universal-css-animations';
 ```
 
 Apply an animation to a React component:
 
 ```
 import {useRef, useState} from 'react'
-import useCssAnimate from 'css-animations/react';
+import useCssAnimate from 'universal-css-animations/react';
 import "./App.css"
 function App() {
     const elementRef = useRef();
@@ -103,7 +108,7 @@ import { createApp } from 'vue'
 import './style.css'
 
 import App from './App.vue'
-import cssAnimateDirective from "css-animations/vue";
+import cssAnimateDirective from "universal-css-animations/vue";
 
 let app = createApp(App);
 
@@ -116,7 +121,7 @@ Apply an animation to a Vue component:
 ```
 <script setup>
 import {ref} from 'vue'
-import {Animations as options} from "css-animations";
+import {Animations as options} from "universal-css-animations";
 
 const animationName = ref("swing");
 const animationDuration = ref(1);

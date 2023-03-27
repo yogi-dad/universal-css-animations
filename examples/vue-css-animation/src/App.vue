@@ -1,8 +1,8 @@
 <script setup>
 import {ref} from 'vue'
-import {Animations as options} from "css-animations";
+import {Animations as options} from "universal-css-animations";
 
-const animationName = ref("swing");
+const animationName = ref("");
 const animationDuration = ref(1);
 </script>
 <template>

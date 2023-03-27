@@ -1,11 +1,12 @@
 import {useRef, useState} from 'react'
-import useCssAnimate from 'css-animations/react';
+import useCssAnimate from 'universal-css-animations/react';
+import {Animations as animations} from "universal-css-animations";
 import "./App.css"
 function App() {
     const elementRef = useRef();
-    const [animationName, setAnimationName] = useState('swing');
+    const [animationName, setAnimationName] = useState('');
     const [duration, setDuration] = useState(1);
-    const animations = useCssAnimate({elementRef, animationName, duration:`${duration}s`,deps:[animationName,duration]});
+    useCssAnimate({elementRef, animationName, duration:`${duration}s`,deps:[animationName,duration]});
     return (
         <div className="grid">
             <h1>CSS Animations Preview (React)</h1>

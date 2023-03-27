@@ -1,0 +1,939 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.slide-out-right {
+    animation-name: slideOutRight;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+.rotate-in {
+    animation-name: rotateIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes rotateOut {
+    from {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.rotate-out {
+    animation-name: rotateOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scale-up {
+    animation-name: scaleUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes scaleDown {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.scale-down {
+    animation-name: scaleDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(-50%);
+    }
+    40% {
+        transform: translateY(0%);
+    }
+    60% {
+        transform: translateY(-30%);
+    }
+}
+
+.bounce-in {
+    animation-name: bounceIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes bounceOut {
+    20% {
+        transform: translateY(-10%);
+    }
+    50%, 100% {
+        transform: translateY(50%);
+    }
+    80% {
+        transform: translateY(0%);
+    }
+}
+
+.bounce-out {
+    animation-name: bounceOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes flipIn {
+    from {
+        transform: perspective(400px) rotateY(-90deg);
+        opacity: 0;
+    }
+    to {
+        transform: perspective(400px) rotateY(0);
+        opacity: 1;
+    }
+}
+
+.flip-in {
+    animation-name: flipIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes flipOut {
+    from {
+        transform: perspective(400px) rotateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+}
+
+.flip-out {
+    animation-name: flipOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes swing {
+    20% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.swing {
+    animation-name: swing;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    transform-origin: top center;
+}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoom-in {
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.zoom-out {
+    animation-name: zoomOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes wobble {
+    0%, 100% {
+        transform: none;
+    }
+    15%, 45%, 75% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    30%, 60%, 90% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+}
+
+.wobble {
+    animation-name: wobble;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.fade-out-down {
+    animation-name: fadeOutDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-top {
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes slideOutBottom {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.slide-out-bottom {
+    animation-name: slideOutBottom;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes rubberBand {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.rubber-band {
+    animation-name: rubberBand;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.roll-in {
+    animation-name: rollIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes rollOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    }
+}
+
+.roll-out {
+    animation-name: rollOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes jiggle {
+    0%, 100% {
+        transform: none;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.jiggle {
+    animation-name: jiggle;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in-left {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+.fade-out-right {
+    animation-name: fadeOutRight;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes tada {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.tada {
+    animation-name: tada;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.flash {
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes colorChange {
+    0% {
+        background-color: #ff0000;
+    }
+    25% {
+        background-color: #00ff00;
+    }
+    50% {
+        background-color: #0000ff;
+    }
+    75% {
+        background-color: #ff00ff;
+    }
+    100% {
+        background-color: #ff0000;
+    }
+}
+
+.color-change {
+    animation-name: colorChange;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 5px #ff0000;
+    }
+    50% {
+        box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+    100% {
+        box-shadow: 0 0 5px #ff0000;
+    }
+}
+
+.pulse-glow {
+    animation-name: pulseGlow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes folding {
+    0% {
+        transform: perspective(1000px) rotateY(0);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(180deg);
+    }
+}
+
+.folding {
+    animation-name: folding;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    transform-origin: 100% 50%;
+    transform-style: preserve-3d;
+}
+@keyframes squeeze {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(0.9, 1.1, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.squeeze {
+    animation-name: squeeze;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes popIn {
+    0% {
+        transform: scale3d(0.1, 0.1, 0.1);
+        opacity: 0;
+    }
+    60% {
+        transform: scale3d(1.2, 1.2, 1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pop-in {
+    animation-name: popIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes flipHorizontal {
+    0% {
+        transform: perspective(400px) rotateY(0);
+        animation-timing-function: ease-out;
+    }
+    40% {
+        transform: perspective(400px) translateZ(-150px) rotateY(170deg);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: perspective(400px) translateZ(-150px) rotateY(190deg) scale3d(1, 1, 1);
+        animation-timing-function: ease-in;
+    }
+    80% {
+        transform: perspective(400px) rotateY(360deg) scale3d(0.95, 0.95, 0.95);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: perspective(400px) scale3d(1, 1, 1);
+        animation-timing-function: ease-in;
+    }
+}
+
+.flip-horizontal {
+    animation-name: flipHorizontal;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+@keyframes shakeHorizontal {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.shake-horizontal {
+    animation-name: shakeHorizontal;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes rotateScale {
+    0% {
+        transform: scale3d(1, 1, 1) rotateZ(0);
+    }
+    50% {
+        transform: scale3d(1.5, 1.5, 1.5) rotateZ(180deg);
+    }
+    100% {
+        transform: scale3d(1, 1, 1) rotateZ(360deg);
+    }
+}
+
+.rotate-scale {
+    animation-name: rotateScale;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bounce-in {
+    animation-name: bounceIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes swing {
+    20% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.swing {
+    transform-origin: top center;
+    animation-name: swing;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.drop {
+    animation-name: drop;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float {
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.1, 0.1, 0.1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.zoom-in {
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes zoomOut {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale3d(0.1, 0.1, 0.1);
+    }
+}
+
+.zoom-out {
+    animation-name: zoomOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: scale(0.8);
+    }
+    20%, 40%, 60%, 80% {
+        transform: scale(1.2);
+    }
+}
+
+.heartbeat {
+    animation-name: heartbeat;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes wobble {
+    0%, 100% {
+        transform: translateX(0%);
+    }
+    15%, 45%, 75% {
+        transform: translateX(-25px) rotate(-5deg);
+    }
+    30%, 60%, 90% {
+        transform: translateX(25px) rotate(5deg);
+    }
+}
+
+.wobble {
+    animation-name: wobble;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes jelly {
+    0%, 100% {
+        transform: scale3d(1, 1, 1);
+    }
+    25% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    75% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+}
+
+.jelly {
+    animation-name: jelly;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes pulsate {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    25% {
+        transform: scale3d(1.05, 1.05, 1);
+    }
+    50% {
+        transform: scale3d(0.95, 0.95, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 1.05, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulsate {
+    animation-name: pulsate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes ripple {
+    0% {
+        transform: scale3d(0.5, 0.5, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1.5, 1.5, 1);
+        opacity: 0;
+    }
+}
+
+.ripple {
+    animation-name: ripple;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes slideOut {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.slide-out {
+    animation-name: slideOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+/* Add more animations as needed */

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css Animation Examples</title>
+    <link rel="stylesheet" href="../css/animate.module.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        div.grid {
+            display: grid;
+            width: 100%;
+            gap: 16px;
+            grid-template-columns: 1fr;
+            place-content: center;
+            place-items: center;
+            height: 100vh;
+
+        }
+#elem{
+    border: 1px solid #000;
+    height: 100px;
+    width: 300px;
+}
+        div.grid > div {
+            display: grid;
+            place-content: center;
+        }
+
+        select {
+            border: 1px solid;
+            width: 300px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="grid">
+    <h1>CSS Animations Preview</h1>
+    <div>
+        <select>
+            <option value="">Select Animation</option>
+        </select>
+        <input title="Control Animation Speed" type="range" min="1" max="10" name="animation-duration">
+        <div>Adjust slider to control animation speed</div>
+    </div>
+
+    <div id="elem"></div>
+</div>
+<script>
+    const items = [];
+    Array
+        .prototype
+        .forEach
+        .call(document
+            .styleSheets[0]
+            .cssRules, function (a) {
+            if (a.name)
+                items.push(a.name.replace(/[A-Z]/g, str => `-${str.toLowerCase()}`))
+        })
+    const select = document.querySelector("select");
+    const elem = document.querySelector("#elem");
+    const animationDuration = document.querySelector("input[name='animation-duration']");
+    items.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item;
+        option.innerHTML = item;
+        select.appendChild(option)
+    })
+    const changeAnimation = (e) => {
+        elem.classList.remove(...elem.classList)
+        assignAnimation(e.target.value);
+    }
+    const assignAnimation = (animationName)=>{
+        elem.innerHTML = animationName;
+        elem.style.animationDuration=`${animationDuration.value}s`
+        elem.classList.add(animationName);
+    }
+    select.addEventListener('change', changeAnimation)
+    elem.addEventListener('animationend',()=>{
+        elem.classList.remove(...elem.classList);
+    })
+
+</script>
+</body>
+</html>
